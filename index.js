@@ -7,8 +7,9 @@ let appName = '';
 
 function cmdHelpApp() {
     appName='Create Mock Data Help'
-    const PATH = '../cmd-help';
+    const PATH = '../cmd-help/build';
     app.use('/', express.static(path.join(__dirname, PATH)));
+    app.use('/cmd-help', express.static(path.join(__dirname, PATH)));
 }
 
 cmdHelpApp();
